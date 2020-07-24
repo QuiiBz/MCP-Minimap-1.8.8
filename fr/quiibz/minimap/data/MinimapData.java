@@ -47,9 +47,12 @@ public class MinimapData {
      * @param player
      */
     public void update(World world, Entity player) {
-    	
-    	this.updateData(world, player);
-    	this.updateTexture();
+    	    	
+    	if(this.shouldUpdate(player)) {
+    		
+    		this.updateData(world, player);
+        	this.updateTexture();
+    	}
     }
     
     /**
